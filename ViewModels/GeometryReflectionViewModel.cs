@@ -73,7 +73,7 @@ namespace GeometryReflectionApp.ViewModels
                 CurrentShapeInfo = $"Type: {_currentShape.GetType().Name}\n" +
                                 $"Center: ({_currentShape.CenterX}, {_currentShape.CenterY})" +
                                 sizeInfo +
-                                $"\nBounding Rect: ({rect.x1}, {rect.y1}) - ({rect.x2}, {rect.y2})\n" +
+                                $"\nBounding rect: ({rect.x1}, {rect.y1}) - ({rect.x2}, {rect.y2})\n" +
                                 $"Area: {_currentShape.GetArea()}";
             }
         }
@@ -147,7 +147,7 @@ namespace GeometryReflectionApp.ViewModels
                 if (_currentShape != null)
                 {
                     UpdateShapeInfo();
-                    Output = $"Created {SelectedType.Name} successfully";
+                    Output = $"{SelectedType.Name} was created successfully";
                     LoadMethods();
                 }
                 else
@@ -198,7 +198,6 @@ namespace GeometryReflectionApp.ViewModels
                 
                 if (type == typeof(Ellipse))
                 {
-                    // Для эллипса: вычисляем новые радиусы и центр
                     double newRadiusX = (BoundingRectX2 - BoundingRectX1) / 2;
                     double newRadiusY = (BoundingRectY2 - BoundingRectY1) / 2;
                     double newCenterX = (BoundingRectX1 + BoundingRectX2) / 2;
@@ -211,7 +210,6 @@ namespace GeometryReflectionApp.ViewModels
                 }
                 else if (type == typeof(Rectangle))
                 {
-                    // Для прямоугольника: вычисляем ширину и высоту
                     double newWidth = BoundingRectX2 - BoundingRectX1;
                     double newHeight = BoundingRectY2 - BoundingRectY1;
                     double newCenterX = (BoundingRectX1 + BoundingRectX2) / 2;
@@ -224,7 +222,6 @@ namespace GeometryReflectionApp.ViewModels
                 }
                 else if (type == typeof(Line))
                 {
-                    // Для линии: обновляем конечную точку и центр
                     double newEndX = BoundingRectX2;
                     double newEndY = BoundingRectY2;
                     double newCenterX = (BoundingRectX1 + BoundingRectX2) / 2;
@@ -237,7 +234,6 @@ namespace GeometryReflectionApp.ViewModels
                 }
                 else if (type == typeof(Point))
                 {
-                    // Для точки: перемещаем центр
                     double newCenterX = (BoundingRectX1 + BoundingRectX2) / 2;
                     double newCenterY = (BoundingRectY1 + BoundingRectY2) / 2;
                     

@@ -3,7 +3,8 @@
         xmlns:vm="using:GeometryReflectionApp.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="800"
+        Height="650"
         x:Class="GeometryReflectionApp.Views.MainWindow"
         x:DataType="vm:GeometryReflectionViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -64,7 +65,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0" Margin="10" Spacing="10">
+        <StackPanel Grid.Column="0" Margin="5">
             <TextBlock Text="The assembly path:" FontSize="16" Foreground="#FF0066CC"/>
             <TextBox Watermark="The path to DLL" Text="{Binding AssemblyPath}"/>
             <Button Content="Loading the assembly" Command="{Binding LoadAssemblyCommand}"/>
@@ -106,18 +107,20 @@
 
             <StackPanel IsVisible="{Binding ShowBoundingRectEditor}" Margin="5" Spacing="5">
                 <TextBlock Text="Edit Bounding Rectangle" FontWeight="Bold"/>
-                <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto">
-                    <TextBlock Text="X1:" Grid.Row="0" Grid.Column="0"/>
-                    <TextBox Text="{Binding BoundingRectX1}" Grid.Row="0" Grid.Column="1"/>
+                <Grid ColumnDefinitions="Auto,100,Auto,100" Margin="0,5">
+                    <TextBlock Text="X1:" Grid.Column="0" VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding BoundingRectX1}" Grid.Column="1" Margin="5,0"/>
                     
-                    <TextBlock Text="Y1:" Grid.Row="1" Grid.Column="0"/>
-                    <TextBox Text="{Binding BoundingRectY1}" Grid.Row="1" Grid.Column="1"/>
+                    <TextBlock Text="Y1:" Grid.Column="2" VerticalAlignment="Center" Margin="15,0,0,0"/>
+                    <TextBox Text="{Binding BoundingRectY1}" Grid.Column="3" Margin="5,0"/>
+                </Grid>
+
+                <Grid ColumnDefinitions="Auto,100,Auto,100" Margin="0,5">
+                    <TextBlock Text="X2:" Grid.Column="0" VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding BoundingRectX2}" Grid.Column="1" Margin="5,0"/>
                     
-                    <TextBlock Text="X2:" Grid.Row="2" Grid.Column="0"/>
-                    <TextBox Text="{Binding BoundingRectX2}" Grid.Row="2" Grid.Column="1"/>
-                    
-                    <TextBlock Text="Y2:" Grid.Row="3" Grid.Column="0"/>
-                    <TextBox Text="{Binding BoundingRectY2}" Grid.Row="3" Grid.Column="1"/>
+                    <TextBlock Text="Y2:" Grid.Column="2" VerticalAlignment="Center" Margin="15,0,0,0"/>
+                    <TextBox Text="{Binding BoundingRectY2}" Grid.Column="3" Margin="5,0"/>
                 </Grid>
                 <Button Content="Apply сhanges" Command="{Binding ApplyBoundingRectangleCommand}"/>
             </StackPanel>
@@ -127,7 +130,7 @@
         </StackPanel>
 
         <ScrollViewer Grid.Column="1" Margin="10">
-            <StackPanel Spacing="10">
+            <StackPanel Spacing="5">
                 <TextBlock Text="Shape information:" FontSize="16" Foreground="#FF0066CC"/>
                 <TextBox Text="{Binding CurrentShapeInfo}" 
                          IsReadOnly="True" 
@@ -135,12 +138,12 @@
                          AcceptsReturn="True"
                          Height="200"/>
                 
-                <TextBlock Text="Output:" FontSize="16" Foreground="#FF0066CC" Margin="0,10,0,0"/>
+                <TextBlock Text="Output:" FontSize="16" Foreground="#FF0066CC"/>
                 <TextBox Text="{Binding Output}" 
                          IsReadOnly="True" 
                          TextWrapping="Wrap"
                          AcceptsReturn="True"
-                         Height="100"/>
+                         Height="200"/>
             </StackPanel>
         </ScrollViewer>
     </Grid>

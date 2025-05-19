@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GeometryReflectionApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa4efc0c2f04408396c6b78ae29c7231aa0bd7d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("GeometryReflectionApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GeometryReflectionApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

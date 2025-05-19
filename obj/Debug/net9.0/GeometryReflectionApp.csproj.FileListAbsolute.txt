@@ -65,3 +65,4 @@ C:\Users\user\Avalonia\GeometryReflectionApp\bin\Debug\net9.0\runtimes\win-x86\n
 C:\Users\user\Avalonia\GeometryReflectionApp\obj\Debug\net9.0\Geometry.FEDCA2C6.Up2Date
 C:\Users\user\Avalonia\GeometryReflectionApp\obj\Debug\net9.0\GeometryReflectionApp.genruntimeconfig.cache
 C:\Users\user\Avalonia\GeometryReflectionApp\obj\Debug\net9.0\ref\GeometryReflectionApp.dll
+C:\Users\user\Avalonia\GeometryReflectionApp\obj\Debug\net9.0\GeometryReflectionApp.sourcelink.json

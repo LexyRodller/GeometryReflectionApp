@@ -106,7 +106,7 @@
             </ItemsControl>
 
             <StackPanel IsVisible="{Binding ShowBoundingRectEditor}" Margin="5" Spacing="5">
-                <TextBlock Text="Edit Bounding Rectangle" FontWeight="Bold"/>
+                <TextBlock Text="Edit bounding rectangle" FontWeight="Bold"/>
                 <Grid ColumnDefinitions="Auto,100,Auto,100" Margin="0,5">
                     <TextBlock Text="X1:" Grid.Column="0" VerticalAlignment="Center"/>
                     <TextBox Text="{Binding BoundingRectX1}" Grid.Column="1" Margin="5,0"/>
